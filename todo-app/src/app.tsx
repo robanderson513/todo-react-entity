@@ -9,14 +9,16 @@ import UserList from "./user/user-list";
 const App = () => (
   <div className="app">
     <SideNav></SideNav>
-    <div className="main-content">
+    <div className="flex-grow">
       <Header></Header>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/users" element={<UserList />} />
-        <Route path="/tasks" element={<Task />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/users" element={<UserList />} />
+          <Route path="/tasks" element={<Task />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
     </div>
   </div>
 );
