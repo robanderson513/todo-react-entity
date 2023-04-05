@@ -1,9 +1,24 @@
 .side-nav {
-  width: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  width: 0;
+  overflow: hidden;
   transition: 0.25s ease-in-out;
+  background-color: #1a1c22;
+}
+
+.side-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
 }
 
 .side-nav.active {
+  height: 100%;
   width: 260px;
 }
 
@@ -26,7 +41,7 @@
 }
 
 .hamburger-icon span:nth-child(1) {
-  top: 0px;
+  top: 0;
 }
 .hamburger-icon span:nth-child(2),
 .hamburger-icon span:nth-child(3) {

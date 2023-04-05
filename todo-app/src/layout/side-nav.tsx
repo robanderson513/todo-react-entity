@@ -11,16 +11,7 @@ const SideNav = () => {
   }
 
   return (
-    <div>
-      <div
-        className={`hamburger-icon ${toggled ? "active" : ""}`}
-        onClick={toggleSideNav}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div className="d-flex">
       <div className={`side-nav ${toggled ? "active" : ""}`}>
         <Link to="/">
           <HiHome /> Home
@@ -31,6 +22,15 @@ const SideNav = () => {
         <Link to="/tasks">
           <HiClipboardList /> Tasks
         </Link>
+      </div>
+      <div
+        className={`hamburger-icon ${toggled ? "active" : ""}`}
+        onClick={toggleSideNav}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   );

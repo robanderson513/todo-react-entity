@@ -10,6 +10,10 @@
   pointer-events: none;
 }
 
+.title h1 {
+  margin: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .app-logo {
     animation: App-logo-spin infinite 20s linear;
