@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { HiHome, HiUserGroup, HiClipboardList } from "react-icons/hi";
 import "./side-nav.css";
 
 const SideNav = () => {
@@ -19,7 +21,17 @@ const SideNav = () => {
         <span></span>
         <span></span>
       </div>
-      <div className={`side-nav ${toggled ? "active" : ""}`}></div>
+      <div className={`side-nav ${toggled ? "active" : ""}`}>
+        <Link to="/">
+          <HiHome /> Home
+        </Link>
+        <Link to="/users">
+          <HiUserGroup /> Users
+        </Link>
+        <Link to="/tasks">
+          <HiClipboardList /> Tasks
+        </Link>
+      </div>
     </div>
   );
 };
