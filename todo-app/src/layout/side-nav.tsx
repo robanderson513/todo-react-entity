@@ -23,14 +23,16 @@ const SideNav = () => {
           <HiClipboardList /> Tasks
         </Link>
       </div>
-      <div
-        className={`hamburger-icon ${toggled ? "active" : ""}`}
-        onClick={toggleSideNav}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className="hamburger-container">
+        <div
+          className={`hamburger-icon ${toggled ? "active" : ""}`}
+          onClick={toggleSideNav}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   );

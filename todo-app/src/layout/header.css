@@ -1,12 +1,13 @@
-.app-header {
+header.app-header {
   display: flex;
   align-items: center;
-  height: 160px;
+  height: 140px;
+  background-color: #151618;
 }
 
 .app-logo {
-  height: 240px;
-  width: 240px;
+  height: 200px;
+  width: 200px;
   pointer-events: none;
 }
 

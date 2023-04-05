@@ -21,13 +21,19 @@
   height: 100%;
   width: 260px;
 }
+.hamburger-container {
+  height: 140px;
+  width: 76px;
+  background-color: #151618;
+}
 
 .hamburger-icon {
   position: relative;
-  height: 60px;
-  width: 80px;
+  top: 48px;
+  left: 16px;
   cursor: pointer;
-  margin: 16px;
+  width: 60px;
+  height: 40px;
 }
 
 .hamburger-icon span {

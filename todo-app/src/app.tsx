@@ -9,7 +9,7 @@ import UserList from "./user/user-list";
 const App = () => (
   <div className="app">
     <SideNav></SideNav>
-    <div>
+    <div className="main-content">
       <Header></Header>
       <Routes>
         <Route path="/" element={<Dashboard />} />
