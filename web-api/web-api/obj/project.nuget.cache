@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EBppPWXVdgsYYoPqgfclL4YZws4n462aQ+EuEeRwIBoImnf/hxDiN/VNMSp+CbR/61vwVIpl+DNSH/TPejo+3A==",
+  "dgSpecHash": "WnZOhbv5vGcqzclHqOvu5ZfP184fjZnXZioXMAdJb9EuSl5kTNuTDHSVY/9oQVYCpjb86OGn+akqc3tkL6nFgg==",
   "success": true,
-  "projectFilePath": "C:\\repos\\entity-project\\web-api\\web-api\\WebApi.csproj",
+  "projectFilePath": "C:\\repos\\todo-react-entity\\web-api\\web-api\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rob\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
     "C:\\Users\\Rob\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.4\\microsoft.entityframeworkcore.abstractions.7.0.4.nupkg.sha512",

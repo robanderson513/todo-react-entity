@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\entity-project\\web-api\\web-api\\WebApi.csproj": {}
+    "C:\\repos\\todo-react-entity\\web-api\\web-api\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\repos\\entity-project\\web-api\\web-api\\WebApi.csproj": {
+    "C:\\repos\\todo-react-entity\\web-api\\web-api\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\entity-project\\web-api\\web-api\\WebApi.csproj",
+        "projectUniqueName": "C:\\repos\\todo-react-entity\\web-api\\web-api\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\repos\\entity-project\\web-api\\web-api\\WebApi.csproj",
+        "projectPath": "C:\\repos\\todo-react-entity\\web-api\\web-api\\WebApi.csproj",
         "packagesPath": "C:\\Users\\Rob\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\entity-project\\web-api\\web-api\\obj\\",
+        "outputPath": "C:\\repos\\todo-react-entity\\web-api\\web-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rob\\AppData\\Roaming\\NuGet\\NuGet.Config",
