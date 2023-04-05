@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { User } from "./user.interface";
+import Tile from "../ui/tile";
 
 const UserList = () => {
   const [users, updateUser] = useState<User[]>([]);
@@ -7,18 +8,20 @@ const UserList = () => {
   useEffect(() => {
     fetch("https://localhost:7119/api/User")
       .then((response) => (response.ok ? response.json() : []))
-      .then((response: User[]) => updateUser([...users, ...response]));
+      .then((response: User[]) => updateUser([...response]));
   }, []);
 
   return (
     <div>
       <h2>Users</h2>
       {users?.length > 0 && (
-        <div>
+        <div className="flex column gap-large">
           {users.map((user) => (
-            <div key={user?.id}>
-              <h2>{user.name}</h2>
-            </div>
+            <Tile
+              key={user?.id}
+              header={user.name}
+              subHeader={user.email}
+            ></Tile>
           ))}
         </div>
       )}

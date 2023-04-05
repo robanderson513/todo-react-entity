@@ -11,7 +11,7 @@ const SideNav = () => {
   }
 
   return (
-    <div className="d-flex">
+    <div className="flex">
       <div className={`side-nav ${toggled ? "active" : ""}`}>
         <Link to="/">
           <HiHome /> Home
