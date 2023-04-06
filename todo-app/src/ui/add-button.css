@@ -1,0 +1,18 @@
+.add-button {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: #61dafb;
+}
+
+.add-button svg {
+  font-size: 24px;
+}
+
+.add-button:hover {
+  background-color: #8fe7ff;
+}
+
+.add-button:active {
+  background-color: #7dcce2;
+}

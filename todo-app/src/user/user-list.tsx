@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { User } from "./user.interface";
 import Tile from "../ui/tile";
+import AddButton from "../ui/add-button";
 
 const UserList = () => {
   const [users, updateUser] = useState<User[]>([]);
@@ -10,6 +11,10 @@ const UserList = () => {
       .then((response) => (response.ok ? response.json() : []))
       .then((response: User[]) => updateUser([...response]));
   }, []);
+
+  function openUser() {
+    console.log("opened");
+  }
 
   return (
     <div>
@@ -25,6 +30,7 @@ const UserList = () => {
           ))}
         </div>
       )}
+      <AddButton handleClick={openUser}></AddButton>
     </div>
   );
 };

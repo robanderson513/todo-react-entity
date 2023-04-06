@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import Task from "./Task/task";
 import "./app.css";
 import Dashboard from "./dashboard/dashboard";
 import Header from "./layout/header";
 import SideNav from "./layout/side-nav";
+import Task from "./task/task";
 import UserList from "./user/user-list";
 
 const App = () => (
