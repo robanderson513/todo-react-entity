@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import AddButton from "../ui/add-button";
-import Modal from "../ui/modal";
 import Tile from "../ui/tile";
 import { User } from "./user.interface";
-import Input from "../ui/input";
+import UserDialog from "./user-dialog";
 
 const UserList = () => {
   const [users, updateUser] = useState<User[]>([]);
+  const [activeUser, setUser] = useState<User | undefined>();
   const [showDialog, openDialog] = useState(false);
 
   useEffect(() => {
@@ -17,6 +17,7 @@ const UserList = () => {
 
   function toggleDialog() {
     openDialog(!showDialog);
+    setUser(!showDialog ? { id: null, name: "", email: "" } : undefined);
   }
 
   return (
@@ -36,18 +37,8 @@ const UserList = () => {
       <div className="flex justify-end mt-l">
         <AddButton handleClick={toggleDialog}></AddButton>
       </div>
-      {showDialog && (
-        <Modal toggleDialog={toggleDialog} header="Add User">
-          <div key="content">
-            <form>
-              <Input label="Name" required={true}></Input>{" "}
-              <Input label="Email"></Input>
-            </form>
-          </div>
-          <div key="actions">
-            <button className="primary">Save</button>
-          </div>
-        </Modal>
+      {showDialog && !!activeUser && (
+        <UserDialog toggleDialog={toggleDialog} user={activeUser}></UserDialog>
       )}
     </div>
   );

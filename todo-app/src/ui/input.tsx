@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState, ChangeEventHandler } from "react";
 import "./input.css";
 
 interface InputData {
   label?: string;
   type?: string;
   required?: boolean;
+  onChange: ChangeEventHandler;
 }
 
-const Input = ({ label = "", type = "text", required = false }: InputData) => {
+const Input = ({
+  label = "",
+  type = "text",
+  required = false,
+  onChange,
+}: InputData) => {
   const [focused, toggleFocus] = useState(false);
   const [invalid, toggleInvalid] = useState(false);
 
@@ -30,6 +36,7 @@ const Input = ({ label = "", type = "text", required = false }: InputData) => {
         type={type}
         required={required}
         onFocus={onFocus}
+        onChange={onChange}
         onBlur={(event) => onBlur(event.target.value)}
       ></input>
     </div>

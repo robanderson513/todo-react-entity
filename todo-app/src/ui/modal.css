@@ -9,7 +9,7 @@
 
 .dialog-container {
   position: absolute;
-  min-width: 50%;
+  max-width: 800px;
   top: 25%;
   left: 25%;
   padding: 16px;
@@ -40,7 +40,12 @@
   color: #e6e6e6;
 }
 
+hr {
+  margin: 0;
+}
+
 .dialog-actions {
   display: flex;
   justify-content: end;
+  margin-top: 16px;
 }
