@@ -14,8 +14,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
-    options.AddPolicy(allowedOrigins, policy => policy.WithOrigins("http://localhost:3000"))
-);
+    options.AddPolicy(allowedOrigins, policy =>
+    policy
+        .WithOrigins("http://localhost:3000")
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials()
+));
 
 builder.Services.AddScoped<UserService>();
 
