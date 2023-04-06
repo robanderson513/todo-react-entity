@@ -6,11 +6,9 @@ interface AddButtonEvent {
   handleClick: MouseEventHandler;
 }
 
-const AddButton = ({ handleClick }: AddButtonEvent) => {
-  return (
-    <button className="add-button" onClick={handleClick}>
-      <HiPlus />
-    </button>
-  );
-};
+const AddButton = ({ handleClick }: AddButtonEvent) => (
+  <button className="add-button" onClick={handleClick}>
+    <HiPlus />
+  </button>
+);
 export default AddButton;

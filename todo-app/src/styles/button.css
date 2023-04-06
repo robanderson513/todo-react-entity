@@ -11,16 +11,16 @@ button {
 
 .flat {
   color: #ffffff;
-  background-color: #282c34;
+  background-color: #38444d;
 }
 
 .flat:hover {
-  background-color: #3b414d;
+  background-color: #404d57;
 }
 
 .flat:after {
   content: "";
-  background: #748098;
+  background: #4c5c68;
   display: block;
   position: absolute;
   padding-top: 300%;
