@@ -15,9 +15,9 @@ const UserList = () => {
       .then((response: User[]) => updateUser([...response]));
   }, []);
 
-  function toggleDialog() {
+  function toggleDialog(user?: User) {
     openDialog(!showDialog);
-    setUser(!showDialog ? { id: null, name: "", email: "" } : undefined);
+    setUser(user);
   }
 
   return (
@@ -30,15 +30,21 @@ const UserList = () => {
               key={user?.id}
               header={user.name}
               subHeader={user.email}
+              editMethod={() => toggleDialog(user)}
             ></Tile>
           ))}
         </div>
       )}
       <div className="flex justify-end mt-l">
-        <AddButton handleClick={toggleDialog}></AddButton>
+        <AddButton
+          handleClick={() => toggleDialog({ id: null, name: "", email: "" })}
+        ></AddButton>
       </div>
       {showDialog && !!activeUser && (
-        <UserDialog toggleDialog={toggleDialog} user={activeUser}></UserDialog>
+        <UserDialog
+          toggleDialog={() => toggleDialog()}
+          user={activeUser}
+        ></UserDialog>
       )}
     </div>
   );

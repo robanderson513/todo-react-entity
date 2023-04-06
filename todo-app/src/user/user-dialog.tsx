@@ -28,10 +28,12 @@ const UserDialog = ({ toggleDialog, user }: ModalData) => {
           <Input
             label="Name"
             required={true}
+            value={user.name}
             onChange={(event) => onChange("name", event)}
           ></Input>
           <Input
             label="Email"
+            value={user.email}
             onChange={(event) => onChange("email", event)}
           ></Input>
         </form>

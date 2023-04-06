@@ -4,7 +4,7 @@
   min-width: 200px;
   border-radius: 4px;
   background-color: #5c6e7c;
-  transition: color ease-in 0.5s;
+  transition: all ease-in 0.25s;
 }
 
 .input-field.invalid {

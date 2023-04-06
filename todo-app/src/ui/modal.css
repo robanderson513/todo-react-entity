@@ -31,7 +31,8 @@
 }
 
 .dialog-header {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
   font-size: 26px;
 }
 
@@ -41,7 +42,7 @@
 }
 
 hr {
-  margin: 0;
+  margin: 16px 0;
 }
 
 .dialog-actions {

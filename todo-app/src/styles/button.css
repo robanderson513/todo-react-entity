@@ -47,6 +47,6 @@ button:active:after {
   background-color: #7dcce2;
 }
 
-button:active:after {
+.primary:active:after {
   background: #58d3f5;
 }

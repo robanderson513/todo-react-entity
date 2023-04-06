@@ -5,6 +5,7 @@ interface InputData {
   label?: string;
   type?: string;
   required?: boolean;
+  value?: string;
   onChange: ChangeEventHandler;
 }
 
@@ -12,6 +13,7 @@ const Input = ({
   label = "",
   type = "text",
   required = false,
+  value,
   onChange,
 }: InputData) => {
   const [focused, toggleFocus] = useState(false);
@@ -34,6 +36,7 @@ const Input = ({
       </label>
       <input
         type={type}
+        defaultValue={value}
         required={required}
         onFocus={onFocus}
         onChange={onChange}
