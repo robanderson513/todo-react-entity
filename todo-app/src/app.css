@@ -8,4 +8,5 @@
 
 .main-content {
   padding: 1rem;
+  max-width: 1000px;
 }

@@ -35,7 +35,7 @@ button:active:after {
 }
 
 .primary {
-  color: rgb(40, 44, 52);
+  color: #282c34;
   background-color: #61dafb;
 }
 

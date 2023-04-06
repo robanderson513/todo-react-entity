@@ -23,7 +23,7 @@ const UserList = () => {
     <div>
       <h2>Users</h2>
       {users?.length > 0 && (
-        <div className="flex column gap-large">
+        <div className="flex column gap-l">
           {users.map((user) => (
             <Tile
               key={user?.id}
@@ -33,16 +33,19 @@ const UserList = () => {
           ))}
         </div>
       )}
-      <AddButton handleClick={toggleDialog}></AddButton>
+      <div className="flex justify-end mt-l">
+        <AddButton handleClick={toggleDialog}></AddButton>
+      </div>
       {showDialog && (
         <Modal toggleDialog={toggleDialog} header="Add User">
           <div key="content">
-            <Input label="Name" required={true}></Input>{" "}
-            <Input label="Email"></Input>
+            <form>
+              <Input label="Name" required={true}></Input>{" "}
+              <Input label="Email"></Input>
+            </form>
           </div>
           <div key="actions">
-            <button className="flat">Push 1</button>
-            <button>Push 2</button>
+            <button className="primary">Save</button>
           </div>
         </Modal>
       )}
