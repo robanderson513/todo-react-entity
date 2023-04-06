@@ -3,37 +3,50 @@ button {
   border: 0;
   border-radius: 0.25rem;
   font-size: 1rem;
+  font-weight: bold;
   padding: 0.75rem;
   margin: 0.5rem;
   overflow: hidden;
   cursor: pointer;
-}
-
-.flat {
   color: #ffffff;
   background-color: #38444d;
 }
 
-.flat:hover {
-  background-color: #404d57;
-}
-
-.flat:after {
+button:after {
   content: "";
-  background: #4c5c68;
   display: block;
   position: absolute;
+  border-radius: 0 50% 0 0;
   padding-top: 300%;
   padding-left: 350%;
   margin-left: -20px !important;
   margin-top: -120%;
   opacity: 0;
   transition: all 0.75s;
+  background: #4c5c68;
 }
 
-.flat:active:after {
+button:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
   transition: 0s;
+  background: #4c5c68;
+}
+
+.primary {
+  color: rgb(40, 44, 52);
+  background-color: #61dafb;
+}
+
+.primary:hover {
+  background-color: #8fe7ff;
+}
+
+.primary:active {
+  background-color: #7dcce2;
+}
+
+button:active:after {
+  background: #58d3f5;
 }

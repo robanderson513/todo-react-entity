@@ -7,7 +7,7 @@ interface AddButtonEvent {
 }
 
 const AddButton = ({ handleClick }: AddButtonEvent) => (
-  <button className="add-button" onClick={handleClick}>
+  <button className="add-button primary" onClick={handleClick}>
     <HiPlus />
   </button>
 );
