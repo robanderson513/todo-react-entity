@@ -3,6 +3,7 @@ import AddButton from "../ui/add-button";
 import Modal from "../ui/modal";
 import Tile from "../ui/tile";
 import { User } from "./user.interface";
+import Input from "../ui/input";
 
 const UserList = () => {
   const [users, updateUser] = useState<User[]>([]);
@@ -35,9 +36,11 @@ const UserList = () => {
       <AddButton handleClick={toggleDialog}></AddButton>
       {showDialog && (
         <Modal toggleDialog={toggleDialog} header="Add User">
-          <p key="content">Content Content Content</p>
+          <div key="content">
+            <Input label="Test"></Input>
+          </div>
           <div key="actions">
-            <button>Push 1</button>
+            <button className="flat">Push 1</button>
             <button>Push 2</button>
           </div>
         </Modal>

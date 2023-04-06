@@ -1,0 +1,28 @@
+.input-field {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 200px;
+  border-radius: 4px;
+  background-color: #5c6e7c;
+}
+
+label {
+  font-size: 16px;
+  padding-top: 4px;
+  padding-left: 12px;
+}
+
+input {
+  height: 20px;
+  font-size: 18px;
+  border: 0;
+  padding-left: 12px;
+  outline: none;
+  color: #ffffff;
+  caret-color: #61dafb;
+  background-color: #5c6e7c;
+}
+
+label.active {
+  color: #61dafb;
+}
