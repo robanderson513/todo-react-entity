@@ -6,6 +6,14 @@
   background-color: #5c6e7c;
 }
 
+.input-field.invalid {
+  border: 1px solid red;
+}
+
+.input-field.invalid label {
+  color: red;
+}
+
 label {
   font-size: 16px;
   padding-top: 4px;

@@ -37,7 +37,8 @@ const UserList = () => {
       {showDialog && (
         <Modal toggleDialog={toggleDialog} header="Add User">
           <div key="content">
-            <Input label="Test"></Input>
+            <Input label="Name" required={true}></Input>{" "}
+            <Input label="Email"></Input>
           </div>
           <div key="actions">
             <button className="flat">Push 1</button>

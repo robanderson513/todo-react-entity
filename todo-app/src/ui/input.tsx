@@ -4,22 +4,33 @@ import "./input.css";
 interface InputData {
   label?: string;
   type?: string;
+  required?: boolean;
 }
 
-const Input = ({ label = "", type = "text" }: InputData) => {
+const Input = ({ label = "", type = "text", required = false }: InputData) => {
   const [focused, toggleFocus] = useState(false);
+  const [invalid, toggleInvalid] = useState(false);
 
-  function toggleInputFocus() {
+  function onFocus() {
     toggleFocus(!focused);
   }
 
+  function onBlur(value: string) {
+    toggleFocus(!focused);
+    toggleInvalid(required && !value);
+  }
+
   return (
-    <div className="input-field">
-      <label className={focused ? "active" : ""}>{label}</label>
+    <div className={`input-field ${invalid ? "invalid" : ""}`}>
+      <label className={focused ? "active" : ""}>
+        {label}
+        {required ? "*" : ""}
+      </label>
       <input
         type={type}
-        onFocus={toggleInputFocus}
-        onBlur={toggleInputFocus}
+        required={required}
+        onFocus={onFocus}
+        onBlur={(event) => onBlur(event.target.value)}
       ></input>
     </div>
   );
