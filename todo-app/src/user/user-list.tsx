@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { User } from "./user.interface";
-import Tile from "../ui/tile";
 import AddButton from "../ui/add-button";
+import Modal from "../ui/modal";
+import Tile from "../ui/tile";
+import { User } from "./user.interface";
 
 const UserList = () => {
   const [users, updateUser] = useState<User[]>([]);
+  const [showDialog, openDialog] = useState(false);
 
   useEffect(() => {
     fetch("https://localhost:7119/api/User")
@@ -12,8 +14,8 @@ const UserList = () => {
       .then((response: User[]) => updateUser([...response]));
   }, []);
 
-  function openUser() {
-    console.log("opened");
+  function toggleDialog() {
+    openDialog(!showDialog);
   }
 
   return (
@@ -30,7 +32,16 @@ const UserList = () => {
           ))}
         </div>
       )}
-      <AddButton handleClick={openUser}></AddButton>
+      <AddButton handleClick={toggleDialog}></AddButton>
+      {showDialog && (
+        <Modal toggleDialog={toggleDialog} header="Add User">
+          <p key="content">Content Content Content</p>
+          <div key="actions">
+            <button>Push 1</button>
+            <button>Push 2</button>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 };

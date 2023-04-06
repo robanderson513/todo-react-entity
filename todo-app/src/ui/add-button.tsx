@@ -5,6 +5,7 @@ import "./add-button.css";
 interface AddButtonEvent {
   handleClick: MouseEventHandler;
 }
+
 const AddButton = ({ handleClick }: AddButtonEvent) => {
   return (
     <button className="add-button" onClick={handleClick}>
