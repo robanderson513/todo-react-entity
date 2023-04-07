@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+# TODO React / Entity Framework App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a small sample/test project using a react frontend and entity framework backend with the database housed in memory on the start up the backend (for now).
 
-## Available Scripts
+This is a small pet project for myself to play around with both frameworks coming from an almost strictly Angular background.
 
-In the project directory, you can run:
+## Add TODO's 📃!
 
-### `npm start`
+Add users and add TODOs for them! This app is super basic and just highlights model relationships and CRUD operations. Nothing else fancy, it was purely made as a way to get an easy understanding of the frameworks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## React Playground
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I've never really coded in react (like I said Angular background) so most of what I've done is from coding principles I've developed in Angular, reading of current documentation, and my own intuition. Without formal training in it this is my best guess for how it should look so don't judge too harshly. 😊
 
-### `npm test`
+## UI Elements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+What react and angular DO have in common is that regardless of knowing either you probably should know css. Everything built in this app is done from scratch by me (icon's I definitely imported I'm not that good). Working in the frontend for so long I have a decent eye for UI/UX design, I'm definitely not one for maybe a "big picture" but if you show me a wireframe I can get it done.
