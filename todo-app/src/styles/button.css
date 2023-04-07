@@ -9,7 +9,11 @@ button {
   overflow: hidden;
   cursor: pointer;
   color: #ffffff;
-  background-color: #38444d;
+  background-color: #3c414b;
+}
+
+button:hover {
+  background-color: #484e5a;
 }
 
 button:after {
@@ -22,7 +26,7 @@ button:after {
   margin-left: -20px !important;
   margin-top: -120%;
   opacity: 0;
-  transition: all 0.75s;
+  transition: all 0.5s;
   background: #4c5c68;
 }
 

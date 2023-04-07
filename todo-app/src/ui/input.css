@@ -4,11 +4,12 @@
   min-width: 200px;
   border-radius: 4px;
   background-color: #5c6e7c;
+  border: 2px solid #5c6e7c;
   transition: all ease-in 0.25s;
 }
 
 .input-field.invalid {
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
 .input-field.invalid label {
@@ -25,7 +26,7 @@ input {
   height: 20px;
   font-size: 18px;
   border: 0;
-  padding-left: 12px;
+  padding: 0 8px 6px 12px;
   outline: none;
   color: #ffffff;
   caret-color: #61dafb;
