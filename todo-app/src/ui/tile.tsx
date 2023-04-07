@@ -1,21 +1,23 @@
 import { MouseEventHandler } from "react";
 import "./tile.css";
-import { FiEdit } from "react-icons/fi";
+import { FiEdit, FiTrash2 } from "react-icons/fi";
 
 interface ITile {
   header: string;
   subHeader: string;
-  editMethod?: MouseEventHandler;
-  deleteMethod?: MouseEventHandler;
+  onEdit?: MouseEventHandler;
+  onDelete?: MouseEventHandler;
 }
 
-const Tile = ({ header, subHeader, editMethod, deleteMethod }: ITile) => (
+const Tile = ({ header, subHeader, onEdit, onDelete }: ITile) => (
   <div className="tile-container">
     <h3>{header}</h3>
     <h4>{subHeader}</h4>
-    {/**TODO Fix color **/}
-    <button onClick={editMethod}>
+    <button onClick={onEdit}>
       <FiEdit />
+    </button>
+    <button onClick={onDelete}>
+      <FiTrash2 />
     </button>
   </div>
 );

@@ -5,19 +5,29 @@ import { User } from "./user.interface";
 import UserDialog from "./user-dialog";
 
 const UserList = () => {
-  const [users, updateUser] = useState<User[]>([]);
+  const [users, updateUsers] = useState<User[]>([]);
   const [activeUser, setUser] = useState<User | undefined>();
   const [showDialog, openDialog] = useState(false);
 
   useEffect(() => {
     fetch("https://localhost:7119/api/User")
       .then((response) => (response.ok ? response.json() : []))
-      .then((response: User[]) => updateUser([...response]));
+      .then((response: User[]) => updateUsers([...response]));
   }, []);
 
   function toggleDialog(user?: User) {
     openDialog(!showDialog);
     setUser(user);
+  }
+
+  function deleteUser(userId: number) {
+    const requestOptions = {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    };
+    fetch(`https://localhost:7119/api/User/${userId}`, requestOptions).then(
+      () => updateUsers(users.filter((user) => user.id !== userId))
+    );
   }
 
   return (
@@ -30,7 +40,8 @@ const UserList = () => {
               key={user?.id}
               header={user.name}
               subHeader={user.email}
-              editMethod={() => toggleDialog(user)}
+              onEdit={() => toggleDialog(user)}
+              onDelete={() => deleteUser(user?.id)}
             ></Tile>
           ))}
         </div>
