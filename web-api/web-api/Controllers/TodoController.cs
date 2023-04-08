@@ -14,14 +14,15 @@ namespace WebApi.Controllers
 
         public TodoController() { }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet]
+        public IEnumerable<Todo> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new Todo
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                DateCreated = DateTime.Now.AddDays(index),
+                Title = "Mock Todo",
+                Description = Summaries[Random.Shared.Next(Summaries.Length)],
+                Status = 1
             })
             .ToArray();
         }
