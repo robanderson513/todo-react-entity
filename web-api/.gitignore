@@ -1,2 +1,3 @@
 /vs
-/web-api/obj
+/web-api/obj/*
+/web-api/bin/*
