@@ -16,5 +16,11 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "baseUrl": ".",
+  "paths": {
+    // "@kingsgate/core/animations": ["libs/core/animations/src/index.ts"],
+    // "@kingsgate/core/auth": ["libs/core/auth/src/index.ts"],
+    // "@kingsgate/core/base-components": ["libs/core/base-components/src/index.ts"],
+  }
 }

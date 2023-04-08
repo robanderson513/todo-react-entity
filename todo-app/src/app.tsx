@@ -3,7 +3,7 @@ import "./app.css";
 import Dashboard from "./dashboard/dashboard";
 import Header from "./layout/header";
 import SideNav from "./layout/side-nav";
-import Task from "./task/task";
+import TaskList from "./task/task-list";
 import UserList from "./user/user-list";
 
 const App = () => (
@@ -15,7 +15,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/users" element={<UserList />} />
-          <Route path="/tasks" element={<Task />} />
+          <Route path="/tasks" element={<TaskList />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
