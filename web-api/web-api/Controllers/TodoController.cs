@@ -4,7 +4,7 @@ using WebApi.Models;
 namespace WebApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class TodoController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -15,9 +15,8 @@ namespace WebApi.Controllers
         public TodoController() { }
 
         [HttpGet]
-        public IEnumerable<Todo> Get()
-        {
-            return Enumerable.Range(1, 5).Select(index => new Todo
+        public IEnumerable<Todo> Get() =>
+            Enumerable.Range(1, 5).Select(index => new Todo
             {
                 DateCreated = DateTime.Now.AddDays(index),
                 Title = "Mock Todo",
@@ -25,6 +24,5 @@ namespace WebApi.Controllers
                 Status = 1
             })
             .ToArray();
-        }
     }
 }
