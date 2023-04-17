@@ -70,11 +70,6 @@ C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\WebApi.AssemblyInfo.
 C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\WebApi.csproj.CoreCompileInputs.cache
 C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
-C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\staticwebassets\msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
-C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApi.props
-C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApi.props
-C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApi.props
-C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\staticwebassets.pack.json
 C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\staticwebassets.build.json
 C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\staticwebassets.development.json
 C:\repos\todo-react-entity\web-api\web-api\obj\Debug\net6.0\scopedcss\bundle\WebApi.styles.css
