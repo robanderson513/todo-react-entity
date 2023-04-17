@@ -10,28 +10,13 @@ namespace WebApi.Controllers
     {
         private readonly TodoService _service;
 
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         public TodoController(TodoService service)
         {
             _service = service;
         }
 
         [HttpGet]
-        public IEnumerable<Todo> Get() =>
-            Enumerable.Range(1, 5).Select(index => new Todo
-            {
-                Id = index,
-                DateCreated = DateTime.Now.AddDays(index),
-                Title = "Mock Todo",
-                Description = Summaries[Random.Shared.Next(Summaries.Length)],
-                Status = 1
-            })
-            .ToArray();
-
+        public IEnumerable<Todo> Get() => _service.GetTodos();          
 
         [HttpGet("{id}")]
         public Todo? Get(int id) => _service.GetTodoById(id);

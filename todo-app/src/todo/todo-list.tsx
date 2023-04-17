@@ -33,15 +33,17 @@ const TodoList = () => {
   return (
     <div>
       <h2>Todos</h2>
-      {todos.map((todo) => (
-        <Tile
-          key={todo?.id}
-          header={todo.title}
-          subHeader={todo.description}
-          onEdit={() => toggleDialog(todo)}
-          onDelete={() => deleteTodo(todo?.id)}
-        ></Tile>
-      ))}
+      <div className="flex column gap-l">
+        {todos.map((todo) => (
+          <Tile
+            key={todo?.id}
+            header={todo.title}
+            subHeader={todo.description}
+            onEdit={() => toggleDialog(todo)}
+            onDelete={() => deleteTodo(todo?.id)}
+          ></Tile>
+        ))}
+      </div>
       <div className="flex justify-end mt-l">
         <AddButton
           handleClick={() =>
