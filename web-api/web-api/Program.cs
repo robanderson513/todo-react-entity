@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using web_api.Services;
 using WebApi.DAL;
 using WebApi.Services;
 
@@ -23,6 +24,7 @@ builder.Services.AddCors(options =>
 ));
 
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<TodoService>();
 
 //Add dbContext, here you can we are using In-memory database.
 builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("User"));
