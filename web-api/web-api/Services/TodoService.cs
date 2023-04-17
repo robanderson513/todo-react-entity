@@ -2,7 +2,7 @@
 using WebApi.DAL;
 using WebApi.Models;
 
-namespace web_api.Services
+namespace WebApi.Services
 {
     public class TodoService
     {       
