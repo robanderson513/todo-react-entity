@@ -13,7 +13,7 @@ const TaskList = () => {
     <div>
       <h2>Tasks</h2>
       {tasks.map((task) => (
-        <div>
+        <div key={task.id}>
           <h2>{task.title}</h2>
           <h3>{task.description}</h3>
         </div>
