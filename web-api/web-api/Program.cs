@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using web_api.Services;
 using WebApi.DAL;
 using WebApi.Services;
 
@@ -8,7 +7,6 @@ var allowedOrigins = "_allowedOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
