@@ -29,8 +29,11 @@ const Input = ({
   }
 
   return (
-    <div className={`input-field ${invalid ? "invalid" : ""}`}>
-      <label className={focused ? "active" : ""}>
+    <div
+      className={`input-field ${invalid ? "invalid" : ""}
+      ${focused && !invalid ? "active" : ""}`}
+    >
+      <label>
         {label}
         {required ? "*" : ""}
       </label>
