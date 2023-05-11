@@ -12,11 +12,9 @@ namespace WebApi.Services
             _dataBase = context;
         }
 
-        public IEnumerable<User> GetUsers() =>
-            _dataBase.Users.ToListAsync().Result;
+        public IEnumerable<User> GetUsers() => _dataBase.Users.ToListAsync().Result;
 
-        public User? GetUserById(int id) =>
-             _dataBase.Users.Find(id);
+        public User? GetUserById(Guid id) => _dataBase.Users.Find(id);
 
         public User SaveUser(User user)
         {
@@ -37,7 +35,7 @@ namespace WebApi.Services
             return user;
         }
 
-        public IResult DeleteUser(int id)
+        public IResult DeleteUser(Guid id)
         {
             if (_dataBase.Users.Find(id) is User dbUser)
             {

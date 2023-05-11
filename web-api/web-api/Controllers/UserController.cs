@@ -18,12 +18,12 @@ namespace WebApi.Controllers
         public IEnumerable<User> Get() => _service.GetUsers();
 
         [HttpGet("{id}")]
-        public User? Get(int id) => _service.GetUserById(id);
+        public User? Get(Guid id) => _service.GetUserById(id);
 
         [HttpPost]
         public void Post([FromBody] User user) => _service.SaveUser(user);
 
         [HttpDelete("{id}")]
-        public IResult Delete(int id) => _service.DeleteUser(id);
+        public IResult Delete(Guid id) => _service.DeleteUser(id);
     }
 }

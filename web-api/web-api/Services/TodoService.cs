@@ -32,6 +32,7 @@ namespace WebApi.Services
             {
                 dbTodo.Title = todo.Title;
                 dbTodo.Description = todo.Description;
+                dbTodo.UserId = todo.UserId;
             }
 
             return todo;
