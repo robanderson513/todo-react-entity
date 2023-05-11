@@ -1,6 +1,9 @@
-import { ChangeEvent, MouseEventHandler } from "react";
-import Modal from "../ui/modal";
+import { ChangeEvent, MouseEventHandler, useEffect, useState } from "react";
+import { KeyDescription } from "../interfaces/key-description.interface";
 import Input from "../ui/input";
+import Modal from "../ui/modal";
+import Select from "../ui/select";
+import { User } from "../user/user.interface";
 import { Todo } from "./todo.interface";
 
 interface ModalData {
@@ -8,7 +11,19 @@ interface ModalData {
   todo: Todo;
 }
 const TodoDialog = ({ toggleDialog, todo }: ModalData) => {
-  function saveUser() {
+  const [users, addUsers] = useState<KeyDescription[]>([]);
+
+  useEffect(() => {
+    fetch("https://localhost:7119/api/User")
+      .then((response) => (response.ok ? response.json() : []))
+      .then((response: User[]) =>
+        addUsers([
+          ...response.map((user) => ({ key: user.id, description: user.name })),
+        ])
+      );
+  }, []);
+
+  function saveTodo() {
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -17,24 +32,30 @@ const TodoDialog = ({ toggleDialog, todo }: ModalData) => {
     fetch("https://localhost:7119/api/Todo", requestOptions);
   }
 
-  function onChange(property: string, event: ChangeEvent) {
-    todo[property] = (event.target as HTMLInputElement).value;
+  function onChange(property: string, value: string) {
+    todo[property] = value;
   }
 
   return (
-    <Modal toggleDialog={toggleDialog} header="Add User">
+    <Modal toggleDialog={toggleDialog} header="Add Todo">
       <div key="content">
-        <form id="user-form" className="flex gap-l" onSubmit={saveUser}>
+        <form id="user-form" className="flex gap-l" onSubmit={saveTodo}>
           <Input
             label="Title"
             required={true}
             value={todo.title}
-            onChange={(event) => onChange("title", event)}
+            valueChanged={(value) => onChange("title", value)}
           ></Input>
+          <Select
+            label="User"
+            value={todo.userId}
+            data={users}
+            optionSelected={(event) => onChange("userId", event.key)}
+          ></Select>
           <Input
             label="Description"
             value={todo.description}
-            onChange={(event) => onChange("description", event)}
+            valueChanged={(value) => onChange("description", value)}
           ></Input>
         </form>
       </div>

@@ -20,7 +20,7 @@ const UserList = () => {
     setUser(user);
   }
 
-  function deleteUser(userId: number) {
+  function deleteUser(userId: string) {
     const requestOptions = {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },

@@ -1,4 +1,4 @@
-import { useState, ChangeEventHandler } from "react";
+import { useState } from "react";
 import "./input.css";
 
 interface InputData {
@@ -6,7 +6,7 @@ interface InputData {
   type?: string;
   required?: boolean;
   value?: string;
-  onChange: ChangeEventHandler;
+  valueChanged: (value: string) => void;
 }
 
 const Input = ({
@@ -14,7 +14,7 @@ const Input = ({
   type = "text",
   required = false,
   value,
-  onChange,
+  valueChanged,
 }: InputData) => {
   const [focused, toggleFocus] = useState(false);
   const [invalid, toggleInvalid] = useState(false);
@@ -39,7 +39,7 @@ const Input = ({
         defaultValue={value}
         required={required}
         onFocus={onFocus}
-        onChange={onChange}
+        onChange={(event) => valueChanged(event.target.value)}
         onBlur={(event) => onBlur(event.target.value)}
       ></input>
     </div>

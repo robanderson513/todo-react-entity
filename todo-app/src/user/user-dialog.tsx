@@ -1,6 +1,6 @@
-import { ChangeEvent, MouseEventHandler } from "react";
-import Modal from "../ui/modal";
+import { MouseEventHandler } from "react";
 import Input from "../ui/input";
+import Modal from "../ui/modal";
 import { User } from "./user.interface";
 
 interface ModalData {
@@ -17,8 +17,8 @@ const UserDialog = ({ toggleDialog, user }: ModalData) => {
     fetch("https://localhost:7119/api/User", requestOptions);
   }
 
-  function onChange(property: string, event: ChangeEvent) {
-    user[property] = (event.target as HTMLInputElement).value;
+  function onChange(property: string, value: string) {
+    user[property] = value;
   }
 
   return (
@@ -29,12 +29,12 @@ const UserDialog = ({ toggleDialog, user }: ModalData) => {
             label="Name"
             required={true}
             value={user.name}
-            onChange={(event) => onChange("name", event)}
+            valueChanged={(value) => onChange("name", value)}
           ></Input>
           <Input
             label="Email"
             value={user.email}
-            onChange={(event) => onChange("email", event)}
+            valueChanged={(value) => onChange("email", value)}
           ></Input>
         </form>
       </div>
