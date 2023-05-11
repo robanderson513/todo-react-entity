@@ -19,7 +19,10 @@ namespace WebApi.Controllers
         public IEnumerable<Todo> Get() => _service.GetTodos();          
 
         [HttpGet("{id}")]
-        public Todo? Get(int id) => _service.GetTodoById(id);
+        public Todo? GetById(int id) => _service.GetTodoById(id);
+
+        [HttpGet("User/{id}")]
+        public IEnumerable<Todo> GetByUserId(Guid id) => _service.GetTodosByUserId(id);
 
         [HttpPost]
         public void Post([FromBody] Todo todo) => _service.SaveTodo(todo);

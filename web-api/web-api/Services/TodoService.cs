@@ -12,11 +12,9 @@ namespace WebApi.Services
             _dataBase = context;
         }
 
-        public IEnumerable<Todo> GetTodos() =>
-            _dataBase.Todos.ToListAsync().Result;
+        public IEnumerable<Todo> GetTodos() => _dataBase.Todos.ToListAsync().Result;
 
-        public Todo? GetTodoById(int id) =>
-             _dataBase.Todos.Find(id);
+        public Todo? GetTodoById(int id) => _dataBase.Todos.Find(id);
 
         public Todo SaveTodo(Todo todo)
         {
@@ -49,6 +47,9 @@ namespace WebApi.Services
 
             return Results.NotFound();
         }
+
+        public IEnumerable<Todo> GetTodosByUserId(Guid userId) => _dataBase.Todos.Where(todo => todo.UserId == userId);
+        
     }
 }
 
