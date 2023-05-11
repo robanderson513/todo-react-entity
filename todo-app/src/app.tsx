@@ -15,7 +15,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/users" element={<UserList />} />
-          <Route path="/tasks" element={<TodoList />} />
+          <Route path="/todos" element={<TodoList />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

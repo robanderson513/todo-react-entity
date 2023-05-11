@@ -19,8 +19,8 @@ const SideNav = () => {
         <Link to="/users">
           <HiUserGroup /> Users
         </Link>
-        <Link to="/tasks">
-          <HiClipboardList /> Tasks
+        <Link to="/todos">
+          <HiClipboardList /> Todos
         </Link>
       </div>
       <div className="hamburger-container">
